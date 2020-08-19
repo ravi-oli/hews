@@ -26,7 +26,7 @@ def fetch_story_details(methods=['GET']):
 
 	# Fetch details from DB
 	# 1. Establish credentials
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "provide-path-to-service-account-credentials.json"
+	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/opt/sa.json"
 
 	# 2. Establish BQ client
 	client = bigquery.Client()
