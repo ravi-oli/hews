@@ -10,6 +10,11 @@ app_flask = flask.Flask(__name__,
 	static_url_path="/", 
 	static_folder="./interface")
 
+# 1. Establish credentials
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/opt/sa.json"
+
+# 2. Establish BQ client
+client = bigquery.Client()
 
 # Define API route
 @app_flask.route("/")
@@ -25,12 +30,6 @@ def fetch_story_details(methods=['GET']):
 	story_id = query_params["storyid"]
 
 	# Fetch details from DB
-	# 1. Establish credentials
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/opt/sa.json"
-
-	# 2. Establish BQ client
-	client = bigquery.Client()
-
 	# 3. Query
 	sql_query = """
 		SELECT 
