@@ -1,0 +1,95 @@
+    1  cat /etc/os-release
+    2  free -h
+    3  git clone https://github.com/ravi-oli/hews.git
+    4  exit
+    5  ls
+    6  sudo apt update
+    7  sudo apt install python3-dev python3-pip
+    8  sudo apt install python3-dev python3-pip -y
+    9  pip3 intall virtualenv
+   10  pip3 install virtualenv
+   11  python3 -m virtualenv venv
+   12  ls
+   13  source venv/bin/activate
+   14  pip install -r hews/requirements.txt
+   15  ls
+   16  pwd
+   17  sudo apt install vim
+   18  vim hews/server.py
+   19  python hews/server.py
+   20  history
+   21  clear
+   22  sudo apt-get update
+   23  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   24  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   25  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   26     $(lsb_release -cs) \
+   27     stable"
+   28  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   29  sudo usermod -aG docker raviolins
+   30  exit
+   31  docker ps
+   32  docker images
+   33  clear
+   34  docker images
+   35  vim Dockerfile
+   36  vim entrypoint.sh
+   37  chmod +x entrypoint.sh
+   38  ./entrypoint.sh
+   39  sudo ./entrypoint.sh
+   40  copy sa.json /opt/
+   41  sudo cp sa.json /opt/
+   42  cd /opt/
+   43  ls
+   44  rm -rf hews/ venv/
+   45  sudo rm -rf hews/ venv/
+   46  cd ~
+   47  sudo ./entrypoint.sh
+   48  cat entrypoint.sh
+   49  vim Dockerfile
+   50  docker build -t hd .
+   51  cat Dockerfile
+   52  docker images
+   53  docker run -dit hd:latest
+   54  docker logs 722
+   55  docker images
+   56  docker ps
+   57  docker inspect 722
+   58  docker ps
+   59  curl http://172.17.0.2:8000/story-details?storyid=6989953
+   60  clear
+   61  docker images
+   62  docker ps
+   63  docker run -dit hd:latest
+   64  docker logs --tail 10 -f 0c7
+   65  docker ps
+   66  docker run -dit hd:latest
+   67  docker ps
+   68  docker stop cb4a56f7d8ab
+   69  docker ps
+   70  docker rm cb4a56f7d8ab
+   71  docker ps -q
+   72  docker ps -q | xargs docker stop
+   73  docker ps -aq | xargs docker rm
+   74  docker ps
+   75  docker images
+   76  docker run -dit hd:latest
+   77  docker ps
+   78  docker inspect 5b9
+   79  docker ps
+   80  docker ps -q
+   81  docker ps -q | xargs docker inspect
+   82  docker ps -q | xargs docker inspect | grep "IPAddress"
+   83  sudo apt install nginx
+   84  sudo service nginx status
+   85  sudo vim /etc/nginx/sites-enabled/default
+   86  sudo service nginx stop
+   87  sudo service nginx start
+   88  sudo vim /etc/nginx/sites-enabled/default
+   89  nginx -t
+   90  sudo nginx -t
+   91  sudo nginx -s reload
+   92  clear
+   93  docker ps -q
+   94  docker logs --tail 10 -f 5b9b654b3d27
+   95  history
